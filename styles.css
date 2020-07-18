@@ -4,13 +4,10 @@
   --color-cyan-dark: #00838f; 
   --font-sora:"Sora", sans-serif;
 }
-
-
 * {
     box-sizing: border-box;
   }
-
-  @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100&display=swap');
 
 body{
     margin: 0;
@@ -18,13 +15,6 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-  }
-
-  @media screen and (prefers-color-scheme: dark) {
-    .row {
-      background-color: white;
-      color: white;
-    }
   }
 
 p{
@@ -37,51 +27,52 @@ h1, h2, h3, h4, h5, h6{
   font-family: var(--font-sora);
 }
 .header {
-    padding: 30px;
-    margin-bottom: 5%;
-    text-align: center;
-    background: rgba(13, 112, 119, 0.658); 
-    font-size: 20px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 16px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px !important;
-    --darkreader-inline-boxshadow: rgba(0, 0, 0, 0.2) 0px 10px 16px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
-  }
+  padding: 30px;
+  margin-bottom: 5%;
+  text-align: center;
+  background: rgba(13, 112, 119, 0.658); 
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 16px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px !important;
+  --darkreader-inline-boxshadow: rgba(0, 0, 0, 0.2) 0px 10px 16px 0px, rgba(0, 0, 0, 0.19) 0px 6px 20px 0px;
+}
 
 .row {  
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .info{
-    padding: 1%; 
-    margin-left: 10%;
-    margin-top: 20px;
-    margin-right: 10%;
-    border-top: 1px solid powderblue;
-    border-left: 1px solid powderblue;
-    border-right: 1px solid powderblue;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    background: rgba(104, 104, 104, 0.103); 
-  }
-
-  .proyectos{
-    padding: 1%; 
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-bottom: 5%;
-    border-left: 1px solid powderblue;
-    border-right: 1px solid powderblue;
-    background: rgba(104, 104, 104, 0.103); 
-  }
-
-.covid{
+  padding: 1%; 
   margin-left: 10%;
+  margin-top: 20px;
   margin-right: 10%;
-  margin-bottom: 5%;
+  border-top: 1px solid powderblue;
   border-left: 1px solid powderblue;
   border-right: 1px solid powderblue;
-  border-bottom: 1px solid powderblue;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   background: rgba(104, 104, 104, 0.103); 
+}
+
+.proyectos{
+  padding: 1%; 
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-bottom: 5%;
+  border-left: 1px solid powderblue;
+  border-right: 1px solid powderblue;
+  background: rgba(104, 104, 104, 0.103); 
+}
+
+.covid{
+margin-left: 10%;
+margin-right: 10%;
+margin-bottom: 5%;
+border-left: 1px solid powderblue;
+border-right: 1px solid powderblue;
+border-bottom: 1px solid powderblue;
+background: rgba(104, 104, 104, 0.103); 
+color: var(--color-fuente-dark);
 }
 
 .datosFlex{
@@ -209,14 +200,24 @@ h1, h2, h3, h4, h5, h6{
   color: var(--color-fuente-dark);
   transition: transform 0.3s;
 }
-
-
+.textSubtitulo:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.03); 
+}
 
 .tituloCovid{
   flex: 100%; 
   text-align: left; 
-  margin-left: 1%
+  margin-left: 1%;
+  color: var(--color-fuente-dark);
+  transition: transform 0.3s;
+}.tituloCovid:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.01); 
 }
+
 
 .imgHobbie{
   height: 300px;
@@ -377,7 +378,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 }
 
 @media screen and (max-width: 1000px) {
-  video{
+  .video{
     width: 400px;
   }
 }
@@ -389,14 +390,20 @@ tr:nth-child(even) {background-color: #f2f2f2;}
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1465px) {
   .rowImageHobbies.sprites{
-    margin-left: 50px;
+    margin-left: 55px;
+  }.mapaCovid{
+    width: 400px;
+    height: 600px;
+  }.videoCovid{
+    width: 300px;
+    height: 250px;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  video{
+  .video{
     width: 350px;
   }
 }
