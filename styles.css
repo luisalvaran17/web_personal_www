@@ -5,6 +5,7 @@
   --font-sora:"Sora", sans-serif;
 }
 
+
 * {
     box-sizing: border-box;
   }
@@ -18,13 +19,21 @@ body{
     background-attachment: fixed;
     background-size: cover;
   }
+
+  @media screen and (prefers-color-scheme: dark) {
+    .row {
+      background-color: white;
+      color: white;
+    }
+  }
+
 p{
   color: var(--color-fuente-dark);
   font-family: var(--font-sora)
 }
 
 h1, h2, h3, h4, h5, h6{
-  color: var(--color-fuente-dark);    
+  color: var(--bg-color);   
   font-family: var(--font-sora);
 }
 .header {
@@ -75,8 +84,16 @@ h1, h2, h3, h4, h5, h6{
   background: rgba(104, 104, 104, 0.103); 
 }
 
-.videoFlex{
+.datosFlex{
   flex: 30%; 
+  padding-right: 30px; 
+  padding-left: 30px; 
+  text-align: center;
+}
+
+.videoFlex{
+  flex: 100%; 
+  
   padding-right: 30px; 
   padding-left: 30px; 
   text-align: center;
@@ -157,7 +174,6 @@ h1, h2, h3, h4, h5, h6{
   
 .listaFlex{
   flex: 40%;
-  padding: 20px;
 }
 
 .textTitulo{
@@ -195,10 +211,11 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
-.textSubtitulo:hover {
-  -ms-transform: scale(1.2); /* IE 9 */
-  -webkit-transform: scale(1.2); /* Safari 3-8 */
-  transform: scale(1.05); 
+
+.tituloCovid{
+  flex: 100%; 
+  text-align: left; 
+  margin-left: 1%
 }
 
 .imgHobbie{
@@ -241,37 +258,74 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 #videojuego {
   width: 85px;
   height: 85px;
+  transition: transform 0.3s;
+  outline: none;
   background: url(https://github.com/luisalvaran17/web_personal_www/blob/gh-pages/images/hobbies_color.png?raw=true) 2px 0;
 }
 
 #pesca {
   width: 85px;
   height: 85px;
+  transition: transform 0.3s;
   background: url(https://github.com/luisalvaran17/web_personal_www/blob/gh-pages/images/hobbies_color.png?raw=true) 1px 190px;
 }
 
 #viajar {
   width: 85px;
   height: 85px;
+  transition: transform 0.3s;
   background: url(https://github.com/luisalvaran17/web_personal_www/blob/gh-pages/images/hobbies_color.png?raw=true)1px 85px;
 }
 
 #ejercicio {
   width: 85px;
   height: 85px;
+  transition: transform 0.3s;
   background: url(https://github.com/luisalvaran17/web_personal_www/blob/gh-pages/images/hobbies_color.png?raw=true)197px 85px;
 }
 #tv {
   width: 85px;
   height: 85px;
+  transition: transform 0.3s;
   background: url(https://github.com/luisalvaran17/web_personal_www/blob/gh-pages/images/hobbies_color.png?raw=true) 85px 190px;
 }
 #acampar {
   width: 85px;
   height: 85px;
+  transition: transform 0.3s;
   background: url(https://github.com/luisalvaran17/web_personal_www/blob/gh-pages/images/hobbies_color.png?raw=true) 85px 85px;
 }
 
+#videojuego:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.08); 
+}
+#pesca:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.08); 
+}
+#tv:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.08); 
+}
+#ejercicio:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.08); 
+}
+#viajar:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.08); 
+}
+#acampar:hover {
+  -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.08); 
+}
 
   /* Footer */
 .footer {
@@ -309,9 +363,18 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     }
     .spin{
         transform: translate(400px);
+    }video{
+      width: 200px;
     }
 }
 
+
+@media screen and (max-width: 500px){
+.spin{
+    visibility: hidden;
+    position: fixed;
+  }
+}
 
 @media screen and (max-width: 1000px) {
   video{
